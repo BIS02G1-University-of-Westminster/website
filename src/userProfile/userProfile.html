@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Title of the document</title>
+    <meta charset="UTF-8">
+    <title>User Profile - Quality Education</title>
+    <link rel="stylesheet" href="userProfile.css"> 
 </head>
-
 <body>
-
-    <form>
-        <label id="output">My name is...</label><br><br><br>
-        <input type="text" id="name"><br><br>
-        <input type="button" value="Save" onclick="updateName()">
-    </form>
-    
-    <!-- <button onclick="">PRESS ME</button> -->
-
-
-    <div>
-
+    <div id="userProfileContainer">
+        <h1>Please enter your details</h1>
+        <div id="questionCard">
+            <div id="contentArea">
+                <div id="sectionName"></div>
+                <div id="questionText"></div>
+                <div id="answerArea">
+                    <div id="answerOptions"></div>
+                    <button id="previousButton">Previous</button>
+                    <button id="nextButton">Next</button>
+                </div>
+                <div id="allQuestions">
+                    <!-- All questions and their answers for the current section will be listed here -->
+                </div>
+            </div>
+            
+            <div id="progressSection">
+                <div id="progressIndicator">
+                    <div id="percentageCompleted"></div>
+                    <ul id="sectionList">
+                        <!-- List items will be generated based on sections -->
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <script src="userProfile.js"></script>
-
+    <script src="userProfile.js"></script> 
 </body>
-
 </html>

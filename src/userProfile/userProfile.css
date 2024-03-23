@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+#userProfileContainer {
+    text-align: center;
+}
+
+#sectionName {
+    text-align: left;
+    font-size: xx-large;
+    margin-bottom: 5%;
+}
+
+#answerArea, #progressSection {
+    padding: 0 20px; 
+}
+
+#questionCard {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: left;
+    align-items: stretch;
+}
+
+#answerArea {
+    text-align: center;
+}
+
+#contentArea {
+    width: 60%; 
+    display: flex;
+    flex-direction: column;
+}
+
+#progressSection {
+    width: 40%;
+    display: flex;
+    flex-direction: column; 
+    border-left: 2px solid #ddd;
+}
+
+
+
+#sectionList li.completed {
+    color: green;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#answerOptions input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#percentageCompleted {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#sectionList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#allQuestions {
+    text-align: left;
+    border-top: 2px solid #ddd;
+    flex-grow: 1;
+}
+
+#sectionList li {
+    padding: 8px;
+    margin-bottom: 6px;
+}
+
+.completed::before {
+    content: "\2713"; 
+    color: green;
+    padding-right: 5px;
+}
+
+button:disabled {
+    background-color: #cccccc; 
+    color: #666666; 
+    cursor: not-allowed; 
+}
