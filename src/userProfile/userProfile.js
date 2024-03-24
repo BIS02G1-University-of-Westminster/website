@@ -59,8 +59,7 @@ function nextQuestion() {
         updateSectionProgressIndicator();
         currentSection++;
         if (currentSection >= sections.length) {
-            alert('You have completed all sections.');
-            displayProfile(); // Function to display completed profile
+            displayProfile();
             return;
         }
     }
@@ -82,18 +81,16 @@ function previousQuestion() {
     updatePercentageIndicator();
 }
 
-// New function to display all questions and their current answers for the current section
 function displayAllQuestions() {
     const allQuestionsDiv = document.getElementById('allQuestions');
-    allQuestionsDiv.innerHTML = ''; // Clear previous content
+    allQuestionsDiv.innerHTML = '';
     sections[currentSection].Questions.forEach((q) => {
         const questionText = document.createElement('p');
-        questionText.textContent = `${q.Label}: ${q.Value || ' '}`; // Show the label and value, or a placeholder if no value
+        questionText.textContent = `${q.Label}: ${q.Value || ' '}`;
         allQuestionsDiv.appendChild(questionText);
     });
 }
 
-// Function to display current question and update UI elements
 function displayCurrentQuestion() {
     console.log('##inside display current Question');
     console.log('##current question index: '+currentQuestion);
@@ -105,12 +102,16 @@ function displayCurrentQuestion() {
             document.getElementById('previousButton').removeAttribute('disabled', '');
         }
 
+        if (currentSection >= (sections.length - 1) && currentQuestion >= (sections[currentSection].Questions.length - 1)) {
+            document.getElementById('nextButton').innerHTML = 'Finish';
+        }
+
         document.getElementById('sectionName').textContent = sections[currentSection].Label;
-        document.getElementById('questionText').textContent = `${currentQuestion + 1}/${totalQuestions}: ${sections[currentSection].Questions[currentQuestion].Label}`;
+        document.getElementById('questionText').textContent = `${currentQuestion + 1}/${sections[currentSection].Questions.length}: ${sections[currentSection].Questions[currentQuestion].Label}`;
         document.getElementById('answerOptions').innerHTML = `<input type="text" id="userInput" placeholder="Your answer...">`;
 
 
-        displayAllQuestions(); // Call to new function to display all questions
+        displayAllQuestions();
     }
 }
 
@@ -143,7 +144,6 @@ function updateSectionProgressIndicator() {
     }
 }
 
-// Function to display completed user profile
 function displayProfile() {
     console.log('##displayProfile')
     const profileSection = document.createElement('div');
