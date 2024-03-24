@@ -1,5 +1,25 @@
 * {
     box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+
+
+
+
+/*////////////////////////
+///// Content Area //////
+///////////////////////*/
+
+#contentArea {
+    width: 60%; 
+    display: flex;
+    flex-direction: column;
+}
+
+#answerArea {
+    text-align: center;
 }
 
 #userProfileContainer {
@@ -16,6 +36,8 @@
     padding: 0 20px; 
 }
 
+
+
 #questionCard {
     display: flex;
     margin: auto;
@@ -28,15 +50,29 @@
     align-items: stretch;
 }
 
-#answerArea {
-    text-align: center;
+#answerOptions input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-#contentArea {
-    width: 60%; 
-    display: flex;
-    flex-direction: column;
+#allQuestions {
+    text-align: left;
+    border-top: 2px solid #ddd;
+    flex-grow: 1;
 }
+
+
+
+
+
+
+
+/*////////////////////////
+///// Progress Area //////
+///////////////////////*/
 
 #progressSection {
     width: 40%;
@@ -45,11 +81,37 @@
     border-left: 2px solid #ddd;
 }
 
-
-
 #sectionList li.completed {
     color: green;
 }
+
+.completed::before {
+    content: "\2713"; 
+    color: green;
+    padding-right: 5px;
+}
+
+#percentageCompleted {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#sectionList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sectionList li {
+    padding: 8px;
+    margin-bottom: 6px;
+}
+
+
+
+
+/*////////////////////////
+/////// Buttons /////////
+///////////////////////*/
 
 button {
     margin: 10px;
@@ -66,43 +128,14 @@ button:hover {
     background-color: #45a049;
 }
 
-#answerOptions input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#percentageCompleted {
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-#sectionList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#allQuestions {
-    text-align: left;
-    border-top: 2px solid #ddd;
-    flex-grow: 1;
-}
-
-#sectionList li {
-    padding: 8px;
-    margin-bottom: 6px;
-}
-
-.completed::before {
-    content: "\2713"; 
-    color: green;
-    padding-right: 5px;
-}
-
 button:disabled {
     background-color: #cccccc; 
     color: #666666; 
     cursor: not-allowed; 
 }
+
+
+
+
+
+

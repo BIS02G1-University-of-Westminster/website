@@ -1,27 +1,34 @@
-// userProfile.js
 const sections = [
     {
+        id: 0,
+        Completed: false,
         Label: "Personal Details",
         Questions: [
-            {Label: "What's your name?", Value: ""},
-            {Label: "What's your date of birth?", Value: ""},
-            {Label: "What's your email address?", Value: ""}
+            {Label: "Full Name", Value: ""},
+            {Label: "Date of Birth (DD/MM/YYYY)", Value: ""},
+            {Label: "Country of Residence", Value: ""},
+            {Label: "Email address", Value: ""}
         ]
     },
     {
+        id: 1,
+        Completed: false,
         Label: "Educational Goals",
         Questions: [
-            {Label: "What's your highest educational attainment?", Value: ""},
-            {Label: "What field of study are you interested in?", Value: ""},
-            {Label: "What educational goal are you aiming for this year?", Value: ""}
+            {Label: "University Attended", Value: ""},
+            {Label: "Highest Degree", Value: ""},
+            {Label: "Area of Study", Value: ""},
+            {Label: "Completion Year", Value: ""},
         ]
     },
     {
-        Label: "Other Information",
+        id: 2,
+        Completed: false,
+        Label: "Additional Information",
         Questions: [
-            {Label: "What are your hobbies?", Value: ""},
-            {Label: "What skills would you like to learn?", Value: ""},
-            {Label: "Any other details you want to share?", Value: ""}
+            {Label: "Volunteer Experience", Value: ""},
+            {Label: "Goal for Joining us", Value: ""},
+            {Label: "What changes do you want to see in education?", Value: ""}
         ]
     }
 ];
@@ -31,13 +38,13 @@ let currentQuestion = 0;
 let totalQuestions = sections.reduce((total, section) => total + section.Questions.length, 0);
 let answeredQuestions = 0;
 
-/// Function to initialize the profile creation process
 function initializeProfile() {
+    console.log('##initializeProfile')
     displayCurrentQuestion();
-    updateProgressIndicator();
+    generateSectionList(); 
+    updatePercentageIndicator();
 }
 
-// Update the nextQuestion function to also update all questions display
 function nextQuestion() {
     console.log('##attempting to load next question');
 
@@ -48,6 +55,8 @@ function nextQuestion() {
     currentQuestion++;
     if (currentQuestion >= sections[currentSection].Questions.length) {
         currentQuestion = 0;
+        sections[currentSection].Completed = true 
+        updateSectionProgressIndicator();
         currentSection++;
         if (currentSection >= sections.length) {
             alert('You have completed all sections.');
@@ -56,7 +65,8 @@ function nextQuestion() {
         }
     }
     displayCurrentQuestion();
-    updateProgressIndicator();
+    updatePercentageIndicator();
+    
 }
 
 function previousQuestion() {
@@ -69,7 +79,7 @@ function previousQuestion() {
         currentQuestion = sections[currentSection].Questions.length - 1; 
     }
     displayCurrentQuestion();
-    updateProgressIndicator();
+    updatePercentageIndicator();
 }
 
 // New function to display all questions and their current answers for the current section
@@ -104,24 +114,38 @@ function displayCurrentQuestion() {
     }
 }
 
-// Function to update the progress bar and section list
-function updateProgressIndicator() {
-    const percentage = Math.round((answeredQuestions / totalQuestions) * 100);
-    document.getElementById('percentageCompleted').textContent = percentage + '% completed';
+function generateSectionList() {
     const sectionList = document.getElementById('sectionList');
-    sectionList.innerHTML = '';
-    sections.forEach((section, index) => {
+    sectionList.innerHTML = ''; 
+    sections.forEach(section => {
         const listItem = document.createElement('li');
         listItem.textContent = section.Label;
-        if (index < currentSection || (index === currentSection && currentQuestion === 0 && answeredQuestions > 0)) {
-            listItem.classList.add('completed');
-        }
         sectionList.appendChild(listItem);
     });
+    console.log('## html section list: ' ,sectionList)
+}
+
+function updatePercentageIndicator() {
+    const percentage = Math.round((answeredQuestions / totalQuestions) * 100);
+    document.getElementById('percentageCompleted').textContent = percentage + '% completed';
+
+}
+
+function updateSectionProgressIndicator() {
+    
+    const sectionListItems = document.getElementById('sectionList').children;
+    
+    let i = sections[currentSection].id
+    if (sections[currentSection].Completed == true) {
+        sectionListItems[i].classList.add('completed');
+    } else {
+        sectionListItems[i].classList.remove('completed');
+    }
 }
 
 // Function to display completed user profile
 function displayProfile() {
+    console.log('##displayProfile')
     const profileSection = document.createElement('div');
     sections.forEach((section) => {
         const sectionDiv = document.createElement('div');
@@ -139,10 +163,8 @@ function displayProfile() {
     document.getElementById('userProfileContainer').appendChild(profileSection);
 }
 
-// Add event listeners for the Next and Skip buttons
 document.addEventListener('DOMContentLoaded', () => {
     initializeProfile();
-    console.log('##listening for clicks');
     document.getElementById('previousButton').addEventListener('click', () => previousQuestion());
     document.getElementById('nextButton').addEventListener('click', () => nextQuestion());
 });
