@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>SDG Team - Quality Education</title>
     <link rel="stylesheet" href="teamPage.css">
+    <link rel="stylesheet" href="../template.css">
 </head>
+
 <body>
-    <h1 id="hText">Quality Education Team - About Us</h1>
+    <nav>        
+        <div class="navbar">
+            <img src="/assets/3ed.png" id=logo> 
+            <h1 style="font-weight:large;">QUALITY EDUCATION</h1>
+            <ul>
+                <li><a href ="../home.html">Home</a> </li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="../shop/shop2.html">Shop</a></li>
+                <li><a href ="../userProfile/userProfile.html">Volunteer</a></li>  
+                <li><a href="#about_us">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h2 id="hText">Quality Education Team - About Us</h2>
     <p class="pText">Hover for details and click for the editor's page.</p>
     <div class="team-container">
         <div class="team-member" data-student="Student 1 Details" data-link="https://w1997310.users.ecs.westminster.ac.uk/goal4/pageEditor_ST1.html">
@@ -19,7 +36,9 @@
             <img src="/assets/student3.png" alt="Student 3" class="team-photo">
         </div>
     </div>
+
     <div id="member-details"></div>
     <script src="teamPage.js"></script>
+    
 </body>
 </html>
