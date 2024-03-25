@@ -1,17 +1,36 @@
-/* Base styles for overall content readability and aesthetics */
+
+/* ////////////// */
+/* //// Page //// */
+/* ////////////// */
+
+
 * {
-    box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
 }
+
 
 body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* Dark gray color for better readability */
-    background-color: #f4f4f4; /* Light background to reduce strain */
+    color: #353131; 
+    background-color: #f4f4f4; 
 }
 
+
+.pText {
+    text-align: center; 
+    flex-basis: 50%; 
+    max-width: 50%; 
+    margin: 20px 0;
+    font-size: 18px; 
+}
+
+
+
+/* ///////////// */
+/* // Content // */
+/* ///////////// */
 
 
 
@@ -27,41 +46,16 @@ body {
 }
 
 
-.pText {
-    text-align: center; 
-    flex-basis: 50%; 
-    max-width: 50%; 
-    margin: 20px 0;
-    font-size: 18px; 
-}
-
-
 
 .content-img {
-    flex-basis: 200%; /* Sets a fixed size for the image */
-    height: 200%; /* Ensures the image is square */
-    background-position: center; /* Centers the image within the element */
-    background-size: cover; /* Ensures the image covers the area without losing aspect ratio */
+    flex-basis: 200%; 
+    height: 200%; 
+    background-position: center; 
+    background-size: cover; 
     border-radius: 10px; 
-    margin-left: 20px; /* Adds space between the image and the text */
-    /* width: 50%;  */
+    margin-left: 20px; 
     max-width: 500px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-
-
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column; /* Stacks items vertically on small screens */
-        padding: 20px; /* Reduces padding on smaller screens */
-    }
-
-    .pText, .content-img {
-        flex-basis: 100%; /* Allows text and images to take full width */
-        max-width: 100%; /* Ensures they don't exceed container's width */
-    }
 }
 
 
@@ -70,23 +64,21 @@ body {
 /* //////////// */
 
 #scrollToTopBtn {
-    position: fixed; /* Fixed position to stay in the same place on the screen */
+    position: fixed; 
     bottom: 20px; 
     right: 20px; 
-    background-color: #ce769498; /* A nice shade of green, change as you like */
-    color: white; /* White text color */
-    border: none; /* Remove border */
-    outline: none; /* Remove outline */
-    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
-    padding: 10px 15px; /* Padding for size */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size */
-    opacity: 0.7; /* Make it slightly transparent */
-    transition: opacity 0.2s, background-color 0.2s; /* Smooth transition for hover effects */
-    z-index: 1000; /* Ensure it's above other content */
+    background-color: #ce769498;
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    opacity: 0.9; 
+    transition: opacity 0.2s, background-color 0.2s;
 }
 
 #scrollToTopBtn:hover {
-    opacity: 1; /* Fully opaque on hover */
-    background-color: #ca5c7b98; /* Darker shade of green on hover */
+    opacity: 1; 
+    background-color: #d54d6bc0; 
 }
