@@ -1,0 +1,46 @@
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+#hText {
+    margin-top: 50px;
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.pText {
+    text-align: center;
+    font-size: large;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-evenly; 
+    margin: 50px 0; 
+    padding: 40px; 
+    background-color: #f4f4f4;
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.team-member {
+    flex-basis: 30%; 
+    position: relative;
+    cursor: pointer;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    border: 2px solid #ddd; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.10);
+    opacity: 0.4; 
+}
+
