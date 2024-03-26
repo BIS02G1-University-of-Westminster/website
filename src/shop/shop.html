@@ -1,0 +1,653 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <title>Quality Education SDG Shop</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f8fb;
+        text-align: center;
+    }
+    
+    header {
+        background-color: #921111;
+        color: white;
+        padding: 50px 20px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    nav {
+    display: flex;
+    justify-content: flex-end;
+    }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px; 
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .product {
+        background-color: white;
+        margin: 10px;
+        padding: 20px;
+        width: calc((100% / 5) - 40px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .product img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .product h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        color: #007bff;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .customization select {
+            margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+        background-color: #218838;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #order-summary {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+    margin-right: 180px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+}
+     
+    .order-summary ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    #checkout {
+        text-align: left; /* Align form elements to the left */
+        margin: 20px auto; /* Center the form */
+        width: 80%; /* Adjust width as needed */
+        max-width: 800px; /* Set a maximum width */
+        display: flex;
+        flex-direction: column;
+    }
+
+    #checkout label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #checkout input,
+    #checkout textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #checkout button[type="submit"] {
+        background-color: rgba(166, 21, 11, 0.781);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    #checkout button[type="submit"]:hover {
+        background-color: #b30300;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#order-summary">Order Summary</a>
+            <a href="#checkout">Checkout</a>
+        </nav>
+        <h1>Welcome to Our Shop</h1>
+        <p>Support SDG No.4 and contribute towards lifelong learning opportunities for all.</p>
+    </header>
+
+    <main class="product-container">
+
+        <section class="product" id="product1">
+            <img src="https://live.staticflickr.com/65535/53595270843_b4b052df46_c.jpg" width="100%" alt="Product 1">
+            <h2>Quality Education Hoodie </h2>
+            <p class="price">£13.99</p>
+            <div class="customization">
+                <label for="size1">Size:</label>
+                <select name="size" id="size1">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color1">Color:</label>
+                <select name="color" id="color1">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product2">
+            <img src="https://live.staticflickr.com/65535/53594249532_b7425b6ca8_c.jpg" width="100%" alt="Product 2">
+            <h2>SDG Logo Hoodie</h2>
+            <p class="price">£11.99</p>
+            <div class="customization">
+                <label for="size2">Size:</label>
+                <select name="size" id="size2">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color2">Color:</label>
+                <select name="color" id="color2">
+                    <option value="red">Red</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product3">
+            <img src="https://live.staticflickr.com/65535/53595801156_b59ce415b8_c.jpg" width="100%" alt="Product 3">
+            <h2>SDG No.4 Hoodie</h2>
+            <p class="price">£11.99</p>
+            <div class="customization">
+                <label for="size3">Size:</label>
+                <select name="size" id="size3">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color3">Color:</label>
+                <select name="color" id="color3">
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product4">
+            <img src="https://live.staticflickr.com/65535/53596029122_2423c225c5_c.jpg" width="100%" alt="Product 4">   
+            <h2>Show Support Hoodie</h2>
+            <p class="price">£19.99</p>
+            <div class="customization">
+                <label for="size4">Size:</label>
+                <select name="size" id="size4">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color4">Color:</label>
+                <select name="color" id="color4">
+                    <option value="gray">gray</option>
+                    <option value="red">Red</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product5">
+            <img src="https://live.staticflickr.com/65535/53597416683_c2616a558b_c.jpg" width="100%" alt="Product 5">
+            <h2>Show Support T-Shirt</h2>
+            <p class="price">£13.99</p>
+            <div class="customization">
+                <label for="size5">Size:</label>
+                <select name="size" id="size5">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color5">Color:</label>
+                <select name="color" id="color5">
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                    <option value="beige">Beige</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+
+        <section class="product" id="product6">
+            <img src="https://live.staticflickr.com/65535/53597379993_5c0873f2e2_c.jpg" width="100%" alt="Product 6">
+            <h2>Quality Education T-Shirt</h2>
+            <p class="price">£14.99</p>
+            <div class="customization">
+                <label for="size2">Size:</label>
+                <select name="size" id="size6">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color6">Color:</label>
+                <select name="color" id="color6">
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product7">
+            <img src="https://live.staticflickr.com/65535/53597625380_e5dcb12df0_c.jpg" width="100%" alt="Product 7">
+            <h2>SDG Logo T-Shirt</h2>
+            <p class="price">£10.99</p>
+            <div class="customization">
+                <label for="size7">Size:</label>
+                <select name="size" id="size7">
+                    <option value="small">Small</option>                
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label for="color7">Color:</label>
+                <select name="color" id="color7">
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product8">
+            <img src="https://live.staticflickr.com/65535/53597207186_267e955f10_c.jpg" width="100%" alt="Product 8">
+            <h2>TO DO T-Shirt</h2>
+            <p class="price">£13.99</p>
+            <div class="customization">
+                <label for="size8">Size:</label>
+                <select name="size" id="size8">
+                    <option value="medium">Medium</option>
+                    <option value="small">Small</option>
+                    <option value="small">Large</option>
+                </select>
+                <label for="color8">Color:</label>
+                <select name="color" id="color8">
+                    <option value="orange">Orange</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product9">
+            <img src="https://live.staticflickr.com/65535/53595442469_65a70c8f17_c.jpg" width="100%" alt="Product 9">
+            <h2>SDG Goals Tote Bag</h2>
+            <p class="price">£8.99</p>
+            <div class="customization">
+                <label for="size9">Size:</label>
+                <select name="size" id="size9">
+                    <option value="big">Big</option>
+                    <option value="small">Small</option>
+                </select>
+                <label for="color9">Color:</label>
+                <select name="color" id="color9">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product10">
+            <img src="https://live.staticflickr.com/65535/53594189417_a72d7cab22_c.jpg" width="100%" alt="Product 10">
+            <h2>SDG No.4 Tote Bag</h2>
+            <p class="price">£11.99</p>
+            <div class="customization">
+                <label for="size10">Size:</label>
+                <select name="size" id="size10">
+                    <option value="big">Big</option>
+                    <option value="small">Small</option>
+                </select>
+                <label for="color10">Color:</label>
+                <select name="color" id="color10">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product11">
+            <img src="https://live.staticflickr.com/65535/53597445563_874bd4d83b_c.jpg" width="100%" alt="Product 11">
+            <h2>TO DO - Tote Bag</h2>
+            <p class="price">£14.99</p>
+            <div class="customization">
+                <label for="size11">Size:</label>
+                <select name="size" id="size11">
+                    <option value="big">Big</option>
+                    <option value="small">Small</option>
+                </select>
+                <label for="color11">Color:</label>
+                <select name="color" id="color11">
+                    <option value="orange">Orange</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product12">
+            <img src="https://live.staticflickr.com/65535/53597534219_2ae1f6baef_c.jpg" width="100%" alt="Product 12">
+            <h2>TO DO - Cap</h2>
+            <p class="price">£9.99</p>
+            <div class="customization">
+                <label for="size12">Size:</label>
+                <select name="size" id="size12">
+                    <option value="adult">Adult</option>
+                    <option value="children">Children</option>
+                </select>
+                <label for="color12">Color:</label>
+                <select name="color" id="color12">
+                    <option value="orange">Orange</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product13">
+            <img src="https://live.staticflickr.com/65535/53595062806_8a6fa0d77f_c.jpg" width="100%" alt="Product 13">
+            <h2>SDG No.4 Phone Case</h2>
+            <p class="price">£10.99</p>
+            <div class="customization">
+                <label for="size13">Model:</label>
+                <select name="size" id="size13">
+                    <option value="iphone">Iphone</option>
+                    <option value="android">Android</option>
+                </select>
+                <label for="color13">Color:</label>
+                <select name="color" id="color13">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+        <section class="product" id="product14">
+            <img src="https://live.staticflickr.com/65535/53595514910_6650ccc6f6_c.jpg" width="100%" alt="Product 14">
+            <h2>Quality Education Phone Case</h2>
+            <p class="price">£10.99</p>
+            <div class="customization">
+                <label for="size14">Model:</label>
+                <select name="size" id="size14">
+                    <option value="iphone">Iphone</option>
+                    <option value="android">Android</option>
+                </select>
+                <label for="color14">Color:</label>
+                <select name="color" id="color14">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product15">
+            <img src="https://live.staticflickr.com/65535/53595270913_274f97f065_c.jpg" width="100%" alt="Product 15">
+            <h2>SDG Mug</h2>
+            <p class="price">£10.99</p>
+            <div class="customization">
+                <label for="size15">Size:</label>
+                <select name="size" id="size15">
+                    <option value="big">Big</option>
+                    <option value="small">Small</option>
+                </select>
+                <label for="color15">Color:</label>
+                <select name="color" id="color15">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+
+
+
+        <section class="product" id="product16">
+            <img src="https://live.staticflickr.com/65535/53597661550_9fb07e00f7_c.jpg" width="100%" alt="Product 16">
+            <h2>Quality Education Pin</h2>
+            <p class="price">£0.99</p>
+            <div class="customization">
+                <label for="size16">Size:</label>
+                <select name="size" id="size16">
+                    <option value="big">Big</option>
+                    <option value="small">Small</option>
+                </select>
+                <label for="color16">Color:</label>
+                <select name="color" id="color16">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </section>
+    
+    </main>
+
+
+    <section class="order-summary" id="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: £0.00</p>
+        <button id="undo-button">Undo</button>
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="address">Address:</label>
+            <textarea id="address" required></textarea>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            <button type="submit">Complete Purchase</button>
+        </form>
+        <p id="checkout-feedback"></p>
+
+        <section id="system-feedback" style="display: block;">
+            <h2>Feedback</h2>
+            <div id="feedback-order-summary"></div>
+            <div id="feedback-user-details"></div>
+        </section>
+
+    </section>
+
+    <footer>
+        <p>© 2024 </p>
+    </footer>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const orderSummary = document.getElementById('order-summary');
+    const cartItems = document.getElementById('cart-items');
+    const totalPrice = document.getElementById('total-price');
+    const undoButton = document.getElementById('undo-button');
+    let total = 0;
+    let cart = [];
+
+    // Function to update the order summary
+    function updateOrderSummary() {
+        cartItems.innerHTML = ''; 
+        total = 0;
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span>${item.name} ${item.size || ''} ${item.color || ''}; - £ ${item.price.toFixed(2)} x ${item.quantity}</span>
+            `;
+            cartItems.appendChild(listItem);
+            total += item.price * item.quantity;
+        });
+
+        totalPrice.textContent = `Total: £ ${total.toFixed(2)}`;
+    }
+
+    addToCartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const product = this.parentElement;
+        const productName = product.querySelector('h2').innerText;
+        const productPrice = parseFloat(product.querySelector('.price').innerText.replace('£', ''));
+
+        // Retrieve productId
+        const productId = product.getAttribute('id').replace('product', '');
+
+        // Retrieve size and color from the selected options
+        const size = document.querySelector(`#size${productId}`).value;
+        const color = document.querySelector(`#color${productId}`).value;
+
+        // Check if the product already exists in the cart with the same size and color
+        const existingItem = cart.find(item => item.name === productName && item.size === size && item.color === color);
+        if (existingItem) {
+            existingItem.quantity++; // Increment the quantity
+        } else {
+            // Add the product with customized options to the cart
+            cart.push({ name: productName, price: productPrice, quantity: 1, size: size, color: color });
+        }
+
+        updateOrderSummary();
+        orderSummary.style.display = 'block';
+    });
+});
+
+    function undoLastItem() {
+        const lastItemIndex = cart.length - 1;
+        if (lastItemIndex >= 0) {
+            const lastItem = cart[lastItemIndex];
+            if (lastItem.quantity > 1) {
+                lastItem.quantity--; // Decrement the quantity if more than one
+            } else {
+                cart.pop(); // Remove the last item if its quantity is one
+            }
+            updateOrderSummary();
+        }
+    }
+
+    undoButton.addEventListener('click', undoLastItem);
+});  
+
+
+document.getElementById('checkout-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    // Update system feedback with order summary and user details
+    const cartItems = document.getElementById('cart-items').innerHTML;
+    document.getElementById('feedback-order-summary').innerHTML = cartItems 
+    document.getElementById('feedback-user-details').innerHTML = `
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Address: ${address}</p>
+        <p>Phone: ${phone}</p>
+    `;
+
+    document.getElementById('checkout').style.display = 'block';
+    document.getElementById('system-feedback').style.display = 'block';
+});
+
+    </script>
+</body>
+</html>
