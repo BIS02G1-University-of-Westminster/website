@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.team-member').forEach(member => {
     member.addEventListener('mouseover', function() {
         const details = document.getElementById('member-details');
@@ -19,10 +20,6 @@ document.querySelectorAll('.team-member').forEach(member => {
         window.location.href = this.getAttribute('data-link');
     });
 });
-
-
-
-
 
 
 

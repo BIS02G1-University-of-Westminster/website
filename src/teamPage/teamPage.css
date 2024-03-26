@@ -1,5 +1,7 @@
 * {
     font-family: 'DM Sans', sans-serif;
+    color: #353131; 
+    text-align: center;
 }
 
 #hText {
@@ -16,31 +18,47 @@
 
 .team-container {
     display: flex;
-    justify-content: space-evenly; 
-    margin: 50px 0; 
-    padding: 40px; 
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    margin: 50px 0;
+    padding: 40px;
     background-color: #f4f4f4;
-    border-radius: 5px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-member {
+    position: relative; 
     flex-basis: 30%; 
-    position: relative;
-    cursor: pointer;
+    margin: 10px; 
+    overflow: hidden; 
 }
+
 
 .team-photo {
     width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
-    border: 2px solid #ddd; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
+    display: block; 
+    border-radius: 7px; 
+    cursor: pointer;
 }
 
-.team-member:hover .team-photo {
-    transform: scale(1.10);
-    opacity: 0.4; 
+
+.team-info {
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    transform: translateY(100%); 
+    transition: transform 0.5s; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    border-radius: 0 0 5px 5px; 
+}
+
+
+.team-member:hover .team-info {
+    transform: translateY(0); 
+    cursor: pointer;
 }
 

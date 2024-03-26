@@ -1,0 +1,84 @@
+
+/* ////////////// */
+/* //// Page //// */
+/* ////////////// */
+
+
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #353131; 
+    background-color: #f4f4f4; 
+}
+
+
+.pText {
+    text-align: center; 
+    flex-basis: 50%; 
+    max-width: 50%; 
+    margin: 20px 0;
+    font-size: 18px; 
+}
+
+
+
+/* ///////////// */
+/* // Content // */
+/* ///////////// */
+
+
+
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 40px; 
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+
+
+.content-img {
+    flex-basis: 200%; 
+    height: 200%; 
+    background-position: center; 
+    background-size: cover; 
+    border-radius: 10px; 
+    margin-left: 20px; 
+    max-width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* //////////// */
+/* // Button // */
+/* //////////// */
+
+#scrollToTopBtn {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #ce769498;
+    color: white; 
+    border: none;
+    cursor: pointer; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    opacity: 0.9; 
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1; 
+    background-color: #d54d6bc0; 
+}
