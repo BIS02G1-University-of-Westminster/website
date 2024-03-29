@@ -11,36 +11,57 @@
         text-align: center;
     }
     
-    header {
-        background-color: #921111;
-        color: white;
-        padding: 50px 20px;
-        background-size: cover;
-        background-position: center;
-    }
-    
     header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        text-align: left;
+        font-family:fantasy;
+        font-weight: 100;
+        font-size: 36px;
+        color: #ffffff;
     }
     
     header p {
         font-size: 1.2rem;
         margin-bottom: 30px;
     }
-    nav {
-    display: flex;
-    justify-content: flex-end;
+    .navbar{
+        overflow: hidden;
+        background-color: rgb(167, 43, 43);
+        position: relative;
+        top: 0;
+        margin-left: 0;
+        width: 100%;
     }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px; 
+    #logo {
+        width: 105px;
+        height: 100px;
+        overflow: hidden;
+        float: left;
+    }
+    .navbar ul {
+  background-color: #6a1c1c;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height: 100%;
 }
 
-nav a:hover {
-    text-decoration: underline;
+
+.navbar a {
+  float: left;
+  color: #ffffff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: flex-end;  
+}
+
+.navbar a:hover {
+  background-color: #8c2222;
+  color: white;
 }
 
     .product-container {
@@ -108,24 +129,23 @@ nav a:hover {
     }
 
     #order-summary {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-left: 180px;
-    margin-right: 180px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
-}
-     
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-left: 130px;
+        margin-right: 130px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    }
     .order-summary ul {
         list-style-type: none;
         padding: 0;
     }
     #checkout {
-        text-align: left; /* Align form elements to the left */
-        margin: 20px auto; /* Center the form */
-        width: 80%; /* Adjust width as needed */
-        max-width: 800px; /* Set a maximum width */
+        text-align: left; 
+        margin: 20px auto; 
+        width: 80%; 
+        max-width: 800px; 
         display: flex;
         flex-direction: column;
     }
@@ -161,12 +181,19 @@ nav a:hover {
 </head>
 <body>
     <header>
-        <nav>
-            <a href="#order-summary">Order Summary</a>
-            <a href="#checkout">Checkout</a>
+        <nav>        
+            <div class="navbar">
+                <img src="/Users/eraolldashi/Downloads/website-main/assets/3ed.png" id=logo> 
+                <h1 style="font-weight:large;">QUALITY EDUCATION SHOP</h1>
+                <ul class="navigation">
+                    <li><a href ="home.html"> Home</a> </li>
+                    <li><a href="#overview"> Overview</a></li>
+                    <li><a href="shop/shop2.html">Shop</a></li>
+                    <li><a href ="userProfile/userProfile.html">Volunteer</a></li>  
+                    <li><a href="#about_us">About Us</a></li>
+                </ul>
+            </div>
         </nav>
-        <h1>Welcome to Our Shop</h1>
-        <p>Support SDG No.4 and contribute towards lifelong learning opportunities for all.</p>
     </header>
 
     <main class="product-container">
@@ -178,15 +205,15 @@ nav a:hover {
             <div class="customization">
                 <label for="size1">Size:</label>
                 <select name="size" id="size1">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color1">Color:</label>
                 <select name="color" id="color1">
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="white">White</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="White">White</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -200,14 +227,14 @@ nav a:hover {
             <div class="customization">
                 <label for="size2">Size:</label>
                 <select name="size" id="size2">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color2">Color:</label>
                 <select name="color" id="color2">
-                    <option value="red">Red</option>
-                    <option value="white">White</option>
+                    <option value="Red">Red</option>
+                    <option value="White">White</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -221,15 +248,15 @@ nav a:hover {
             <div class="customization">
                 <label for="size3">Size:</label>
                 <select name="size" id="size3">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color3">Color:</label>
                 <select name="color" id="color3">
-                    <option value="red">Red</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="blue">Blue</option>
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -244,15 +271,15 @@ nav a:hover {
             <div class="customization">
                 <label for="size4">Size:</label>
                 <select name="size" id="size4">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color4">Color:</label>
                 <select name="color" id="color4">
-                    <option value="gray">gray</option>
-                    <option value="red">Red</option>
-                    <option value="white">White</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Red">Red</option>
+                    <option value="White">White</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -267,17 +294,17 @@ nav a:hover {
             <div class="customization">
                 <label for="size5">Size:</label>
                 <select name="size" id="size5">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color5">Color:</label>
                 <select name="color" id="color5">
-                    <option value="red">Red</option>
-                    <option value="pink">Pink</option>
-                    <option value="beige">Beige</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Beige">Beige</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -293,17 +320,17 @@ nav a:hover {
             <div class="customization">
                 <label for="size2">Size:</label>
                 <select name="size" id="size6">
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color6">Color:</label>
                 <select name="color" id="color6">
                     <option value="green">Green</option>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -318,17 +345,17 @@ nav a:hover {
             <div class="customization">
                 <label for="size7">Size:</label>
                 <select name="size" id="size7">
-                    <option value="small">Small</option>                
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <option value="Small">Small</option>                
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
                 </select>
                 <label for="color7">Color:</label>
                 <select name="color" id="color7">
-                    <option value="red">Red</option>
-                    <option value="pink">Pink</option>
-                    <option value="blue">Blue</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Blue">Blue</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -343,14 +370,14 @@ nav a:hover {
             <div class="customization">
                 <label for="size8">Size:</label>
                 <select name="size" id="size8">
-                    <option value="medium">Medium</option>
-                    <option value="small">Small</option>
-                    <option value="small">Large</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Small">Small</option>
+                    <option value="Small">Large</option>
                 </select>
                 <label for="color8">Color:</label>
                 <select name="color" id="color8">
-                    <option value="orange">Orange</option>
-                    <option value="black">Black</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -364,13 +391,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size9">Size:</label>
                 <select name="size" id="size9">
-                    <option value="big">Big</option>
-                    <option value="small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="Small">Small</option>
                 </select>
                 <label for="color9">Color:</label>
                 <select name="color" id="color9">
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -384,13 +411,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size10">Size:</label>
                 <select name="size" id="size10">
-                    <option value="big">Big</option>
-                    <option value="small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="Small">Small</option>
                 </select>
                 <label for="color10">Color:</label>
                 <select name="color" id="color10">
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -404,13 +431,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size11">Size:</label>
                 <select name="size" id="size11">
-                    <option value="big">Big</option>
-                    <option value="small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="Small">Small</option>
                 </select>
                 <label for="color11">Color:</label>
                 <select name="color" id="color11">
-                    <option value="orange">Orange</option>
-                    <option value="black">Black</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -429,8 +456,8 @@ nav a:hover {
                 </select>
                 <label for="color12">Color:</label>
                 <select name="color" id="color12">
-                    <option value="orange">Orange</option>
-                    <option value="black">Black</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -444,13 +471,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size13">Model:</label>
                 <select name="size" id="size13">
-                    <option value="iphone">Iphone</option>
+                    <option value="IPhone">IPhone</option>
                     <option value="android">Android</option>
                 </select>
                 <label for="color13">Color:</label>
                 <select name="color" id="color13">
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
+                    <option value="White">White</option>
+                    <option value="Red">Red</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -464,13 +491,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size14">Model:</label>
                 <select name="size" id="size14">
-                    <option value="iphone">Iphone</option>
+                    <option value="IPhone">IPhone</option>
                     <option value="android">Android</option>
                 </select>
                 <label for="color14">Color:</label>
                 <select name="color" id="color14">
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
+                    <option value="White">White</option>
+                    <option value="Red">Red</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -485,13 +512,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size15">Size:</label>
                 <select name="size" id="size15">
-                    <option value="big">Big</option>
-                    <option value="small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="Small">Small</option>
                 </select>
                 <label for="color15">Color:</label>
                 <select name="color" id="color15">
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -506,13 +533,13 @@ nav a:hover {
             <div class="customization">
                 <label for="size16">Size:</label>
                 <select name="size" id="size16">
-                    <option value="big">Big</option>
-                    <option value="small">Small</option>
+                    <option value="Big">Big</option>
+                    <option value="Small">Small</option>
                 </select>
                 <label for="color16">Color:</label>
                 <select name="color" id="color16">
-                    <option value="white">White</option>
-                    <option value="red">Red</option>
+                    <option value="White">White</option>
+                    <option value="Red">Red</option>
                 </select>
             </div>
             <button class="add-to-cart">Add to Cart</button>
@@ -636,15 +663,26 @@ document.getElementById('checkout-form').addEventListener('submit', function(eve
 
     // Update system feedback with order summary and user details
     const cartItems = document.getElementById('cart-items').innerHTML;
-    document.getElementById('feedback-order-summary').innerHTML = cartItems 
-    document.getElementById('feedback-user-details').innerHTML = `
+    const totalPrice = document.getElementById('total-price').textContent;
+    
+    const feedbackOrderSummary = document.getElementById('feedback-order-summary');
+    feedbackOrderSummary.innerHTML = `
+        <h3>Order Summary</h3>
+        ${cartItems}
+        <h3>Total</h3>
+        <p>${totalPrice}</p>
+    `;
+
+    const feedbackUserDetails = document.getElementById('feedback-user-details');
+    feedbackUserDetails.innerHTML = `
+        <h3>User Details</h3>
         <p>Name: ${name}</p>
         <p>Email: ${email}</p>
         <p>Address: ${address}</p>
         <p>Phone: ${phone}</p>
     `;
 
-    document.getElementById('checkout').style.display = 'block';
+    // Display the feedback section
     document.getElementById('system-feedback').style.display = 'block';
 });
 
