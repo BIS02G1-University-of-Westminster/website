@@ -1,22 +1,14 @@
-
 /* ////////////// */
 /* //// Page //// */
 /* ////////////// */
 
-
-* {
-    font-family: 'DM Sans', sans-serif;
-}
-
-
-body {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.9;
     color: #353131; 
-    background-color: #f4f4f4; 
 }
-
 
 .pText {
     text-align: center; 
@@ -26,13 +18,9 @@ body {
     font-size: 18px; 
 }
 
-
-
 /* ///////////// */
 /* // Content // */
 /* ///////////// */
-
-
 
 .content {
     display: flex;
@@ -45,8 +33,6 @@ body {
     margin: auto; 
 }
 
-
-
 .content-img {
     flex-basis: 200%; 
     height: 200%; 
@@ -57,7 +43,6 @@ body {
     max-width: 500px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
-
 
 /* //////////// */
 /* // Button // */
