@@ -35,8 +35,14 @@ const sections = [
 
 let currentSection = 0;
 let currentQuestion = 0;
-let totalQuestions = sections.reduce((total, section) => total + section.Questions.length, 0);
+const totalQuestions = sections.reduce((total, section) => total + section.Questions.length, 0);
 let answeredQuestions = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeProfile();
+    document.getElementById('previousButton').addEventListener('click', () => previousQuestion());
+    document.getElementById('nextButton').addEventListener('click', () => nextQuestion());
+});
 
 function initializeProfile() {
     console.log('##initializeProfile')
@@ -65,7 +71,6 @@ function nextQuestion() {
     }
     displayCurrentQuestion();
     updatePercentageIndicator();
-    
 }
 
 function previousQuestion() {
@@ -94,25 +99,22 @@ function displayAllQuestions() {
 function displayCurrentQuestion() {
     console.log('##inside display current Question');
     console.log('##current question index: '+currentQuestion);
-    if (currentSection < sections.length) {
-        if (0 == currentSection && 0 == currentQuestion) {
-            console.log('##trying to make previous button disabled');
-            document.getElementById('previousButton').setAttribute('disabled', '');
-        } else {
-            document.getElementById('previousButton').removeAttribute('disabled', '');
-        }
-
-        if (currentSection >= (sections.length - 1) && currentQuestion >= (sections[currentSection].Questions.length - 1)) {
-            document.getElementById('nextButton').innerHTML = 'Finish';
-        }
-
-        document.getElementById('sectionName').textContent = sections[currentSection].Label;
-        document.getElementById('questionText').textContent = `${currentQuestion + 1}/${sections[currentSection].Questions.length}: ${sections[currentSection].Questions[currentQuestion].Label}`;
-        document.getElementById('answerOptions').innerHTML = `<input type="text" id="userInput" placeholder="Your answer...">`;
-
-
-        displayAllQuestions();
+    if (0 == currentSection && 0 == currentQuestion) {
+        console.log('##trying to make previous button disabled');
+        document.getElementById('previousButton').setAttribute('disabled', '');
+    } else {
+        document.getElementById('previousButton').removeAttribute('disabled', '');
     }
+
+    if (currentSection >= (sections.length - 1) && currentQuestion >= (sections[currentSection].Questions.length - 1)) {
+        document.getElementById('nextButton').innerHTML = 'Finish';
+    }
+
+    document.getElementById('sectionName').textContent = sections[currentSection].Label;
+    document.getElementById('questionText').textContent = `${currentQuestion + 1}/${sections[currentSection].Questions.length}: ${sections[currentSection].Questions[currentQuestion].Label}`;
+    document.getElementById('answerOptions').innerHTML = `<input type="text" id="userInput" placeholder="Your answer...">`;
+
+    displayAllQuestions();
 }
 
 function generateSectionList() {
@@ -163,8 +165,3 @@ function displayProfile() {
     document.getElementById('userProfileContainer').appendChild(profileSection);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeProfile();
-    document.getElementById('previousButton').addEventListener('click', () => previousQuestion());
-    document.getElementById('nextButton').addEventListener('click', () => nextQuestion());
-});

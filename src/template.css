@@ -1,76 +1,91 @@
-body {
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+html, body {
+  color: #353131; 
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-
-}
-
-head {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-footer {
-  background-color: rgb(167, 43, 43);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.navbar{
-  overflow: hidden;
-  background-color: rgb(167, 43, 43);
+  min-height: 100%;
   position: relative;
-  top: 0;
-  margin-left: 0;
-  width: 100%;
-    }
+}
+
+body {
+  padding-bottom: 60px;
+  background-color: #f4f1ea;
+}
+
 
 
 #logo {
-  width: 105px;
-  height: 100px;
+  width: 80px;  
+  height: auto;
+  margin-bottom: 5px;
   overflow: hidden;
-  float: left;
 }
 
-h1{
-  text-align: left;
-  font-family:fantasy;
-  font-weight: 100;
-  font-size: 36px;
-  color: #ffffff;
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 50;
+  font-size: 24px;  
+  padding: 0 10px;
+  text-align: center;
+  flex-grow: 1;
+  color: #f9eded;
 }
+
+
+
+
+
+footer {
+  position: fixed; 
+  bottom: 0;  
+  width: 100%;
+  z-index: 10;
+  background-color: #a25648;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+
+
+
+.navbar {
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #a25648; 
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  }
+
+
+
 
 .navbar ul {
-  background-color: #6a1c1c;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  height: 100%;
-}
-
-.footer { 
-  background-color: #762b2b;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: absolute; 
-  bottom: 0;  
-  z-index: 0px;
+  justify-content: center;
 }
 
 .navbar a {
-  float: left;
-  color: #ffffff;
-  padding: 14px 16px;
+  color: #ffffffc1;
+  padding: 10px 15px ;  
   text-decoration: none;
-  font-size: 20px;
-  display: flex;
-  align-items: flex-end;  
+  font-size: 17px;
+  transition: background-color 0.3s;
+  border-radius: 10px;
 }
 
 .navbar a:hover {
-  background-color: #8c2222;
-  color: white;
+  background-color: #62171750;
+  border-radius: 10px;
+  color: #948f8f;
 }
