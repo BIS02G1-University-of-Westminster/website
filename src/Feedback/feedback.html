@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="feedback template.css" />
+    <link rel="stylesheet" href="../template.css"/>
+</head>
+
+<body>
+    <nav>        
+        <div class="navbar">
+            <img src="../../assets/3ed.png" id="logo"> 
+            <h1 style="font-weight:large;">QUALITY EDUCATION</h1>
+            <ul class="navigation">
+                <li><a href="home.html"> Home</a></li>
+                <li><a href="userProfile/userProfile.html">Volunteer</a></li>  
+                <li><a href="shop/shop2.html">Shop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="teamPage/teamPage.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="body">    
+        <header>
+            <h1>Feedback Form</h1>
+            <div id="responseMessage"></div> <!-- Display API response message -->
+        </header>
+
+        <form id="FeedbackForm">
+            <input name="name" type="text" id="name" class="feedback-input" placeholder="Name" required />
+            <input name="email" type="email" id="email" class="feedback-input" placeholder="Email" required />
+            
+            <p>Was the Information Reliable and Informative?</p>
+            <div class="radio-group"> 
+                <input type="radio" id="not" name="satisfy" value="no"> 
+                <label for="not">No</label>
+
+                <input type="radio" id="somewhat" name="satisfy" value="somewhat" checked>
+                <label for="somewhat">Somewhat reliable</label>
+
+                <input type="radio" id="yes" name="satisfy" value="yes"> 
+                <label for="yes">Yes</label> 
+            
+                <input type="radio" id="very_satisfied" name="satisfy" value="very satisfied"> 
+                <label for="very_satisfied">Very reliable</label> 
+            </div> 
+       
+            <p>How did you get to know about us?</p>
+            <select name="info" id="info">
+                <option value="social media">Social Media</option>
+                <option value="news">News</option>
+                <option value="friend">Friends/Family</option>
+                <option value="other" selected>Others</option>
+            </select>
+       
+            <p>Was the website easy to navigate through?</p>
+            <div class="radio-group">
+                <input type="radio" id="easy_yes" name="easy" value="yes" checked>
+                <label for="easy_yes">Yes</label>
+
+                <input type="radio" id="easy_no" name="easy" value="no">
+                <label for="easy_no">No</label>
+            </div>
+
+            <textarea name="message" id="message" class="feedback-input" placeholder="Comment" required></textarea>
+            <input type="submit" value="PREVIEW" onclick="showPreview()" />
+            <input type="submit" value="SUBMIT" style="display: none;" id="submitButton" />
+        </form>
+
+        <div id="preview">
+            <h2>Preview:</h2>
+            <div id="previewContent"></div>
+            <button onclick="editForm()">Edit</button>
+            <input type="submit" value="SUBMIT" onclick="submitForm()" />
+        </div>
+
+        <footer>
+            <!-- Add footer content here -->
+        </footer>
+    </div>
+
+    <script src="script.js">
+       
+    </script>
+    <footer>
+        Zaiba Mahjabeen
+    </footer>
+</body>
+
+</html>
