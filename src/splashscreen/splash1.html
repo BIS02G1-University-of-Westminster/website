@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            }
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(167, 43, 43);
+            position: relative;
+            top: 0;
+            margin-left: 0;
+            width: 100%;
+            }
+        .navbar ul {
+            background-color: #6a1c1c;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            }
+        .navbar a {
+            float: left;
+            color: #ffffff;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            align-items: flex-end;
+            }
+        .navbar a:hover {
+            background-color: #8c2222;
+            color: white;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: #921111;
+            color: #fff;
+        }
+        .splash-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .splash-content {
+            text-align: center;
+            font-size: 100%;
+        }
+        h1 {
+            font-size: 150%; 
+        }
+
+        .loader {
+            width: 40px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            margin: 50px auto; 
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            transform-origin: 50% 116.5%;
+            animation: l17 1s infinite linear; 
+        }
+        .loader:before {
+            content:"";
+            min-width: 233%;
+            height: 233%;
+            background: 
+                radial-gradient(farthest-side,#1d843a 90%,#0000) top,
+                radial-gradient(farthest-side,rgb(35, 103, 162)90%,#0000) left,
+                radial-gradient(farthest-side, #cc6f19 90%,#0000) bottom,
+                radial-gradient(farthest-side,#c51717 90%,#0000) right;
+            background-size: 30% 30%;
+            background-repeat: no-repeat;
+            animation: inherit;
+        }
+        @keyframes l17 {
+            100% {transform: rotate(360deg)}
+        }
+
+        .group-members {
+            margin-top: 130px; 
+            font-size: 60%;
+            margin-bottom: 100px;
+        }
+        ol {
+            list-style: none; 
+            padding: 0; 
+        }
+        ol li {
+            margin-bottom: 5px; 
+        }
+    </style>
+    <script>
+        setTimeout(function(){
+            window.location.href = "home.html";
+        }, 4000);
+    </script>
+</head>
+<body>
+    <header>
+        <nav>        
+            <div class="navbar">
+                <ul class="navigation">
+                    <li><a href ="home.html"> Home</a></li>
+                    <li><a href="#overview"> Overview</a></li>
+                    <li><a href="shop/shop.html">Shop</a></li>
+                    <li><a href ="userProfile/userProfile.html">Volunteer</a></li>  
+                    <li><a href="#about_us">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="splash-container">
+        <div class="splash-content">
+            <h1>Sustainable Development Goal #4</h1>  
+            <p>To ensure <strong>QUALITY EDUCATION</strong> and learning opportunities for all.</p>
+            <div class="loader"></div>       
+            <div class="group-members">
+                <p>Group Members:</p>
+                <ol>
+                    <li>w1990541 Era Olldashi</li>
+                    <li>w1997310 Zaiba Mahjabeen</li>
+                    <li>w2045716 Brenda Ojatamm</li>
+                </ol>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
