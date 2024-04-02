@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Editor</title>
+    <style>
+    
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ea;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+h3{
+    color: #d33d1b;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 50;
+    font-size: 24px;  
+    padding: 0 10px;
+    text-align: center;
+    flex-grow: 1;
+    color: #f9eded;
+}
+
+.page-header {
+    background-color: #803c2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.navbar {
+    width: 15%;
+    background-color: #994738;
+    padding: 15px;
+    overflow: auto;
+    height: auto;
+    flex-shrink: 0;
+    font-family: 'Merriweather', serif; 
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #d33d1b;
+}
+
+.image {
+    width: 200px;  
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#documentation {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#documentation section {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+#documentation h2 {
+    color: #000;
+    margin-bottom: 15px;
+}
+
+#documentation p {
+    line-height: 1.6;
+    color: #000;
+}
+
+#documentation a {
+    color: #d33d1b;
+}
+
+
+</style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Page Editor</h1>
+    </header>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://w1990541.users.ecs.westminster.ac.uk/goal4/student1.jpeg" class="image" alt="student1"> 
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#page1">Splash Screen</a></li>
+                <li><a href="#page2">The Shop</a></li>
+                <li><a href="#page3">Content Page</a></li>
+            </ul>
+        </nav>
+        <main id="documentation">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p><strong>Name:</strong> Era Olldashi</p>
+                <p><strong>Student ID:</strong> w1990541</p>
+                <p><strong>Role:</strong> Student 1</p>
+            </section>
+            <section id="page1">
+                <h2 >Splash Screen</h2>
+                <h3>A splash screen page for a website focusing on Sustainable Development Goal #4.</h3>
+                <p><strong>Header and Navigation Bar:</strong>The header contains a navigation bar with links to different sections of the website such as Home, Overview, Shop, Volunteer, and About Us. The navigation bar has a red background color and changes color on hover.</p>
+                <p><strong>Splash Container:</strong>This section contains the main content of the splash screen. It's designed to occupy the full height of the viewport (100vh) and is centered vertically and horizontally using flexbox. It displays the Sustainable Development Goal #4 title along with a brief description emphasizing "Quality Education."</p>
+                <p><strong>Loader Animation:</strong>Below the description, there's a spinning loader animation implemented using CSS keyframes. This indicates to the user that some process is ongoing, possibly loading resources or redirecting.</p>
+                <p><strong>Group Members:</strong>Lists the group members involved in the project along with their names and student IDs.</p>
+                <p><strong>Script:</strong>A script tag with JavaScript code is included at the end of the body. This script redirects the user to the "home.html" page after a delay of 4000 milliseconds (4 seconds). This is a common technique used for splash screens to briefly display branding or information before directing the user to the main content.</p>
+                <iframe src="https://w1990541.users.ecs.westminster.ac.uk/goal4/splash.html" width="800" height="475"></iframe>
+                <p><a href="https://w1990541.users.ecs.westminster.ac.uk/goal4/splash.html"> Link to Splash</a></p>
+            </section>
+            <section id="page2">
+                <h2>The Shop</h2>
+                <h3>User-friendly interface for browsing and purchasing products related to quality education, with features for customization and easy checkout.</h3>
+                <p><strong>Main Section:</strong>Displays a collection of products related to the theme.Each product has an image, name, price, customization options (size and color), and an "Add to Cart" button. Products are arranged in a grid layout.</p>
+                <p><strong>The Merchandise Range:</strong>I personally created every product sold in the shop, from designing and editing each item to uploading them onto my Flickr account.</p>
+                <p><strong>Order Summary Section:</strong> Displays the items added to the cart along with their details (name, price, quantity, size, and color).Shows the total price of the items in the cart. Includes an "Undo" button to remove the last item added to the cart.</p>
+                <p><strong>Checkout Section:</strong>Contains a form for the user to fill out their name, email, address, and phone number for checkout.Upon submission, it displays the order summary and user details for confirmation.</p>
+                <p><strong>JavaScript:</strong>Handles the functionality of adding items to the cart, updating the order summary, and displaying user feedback upon checkout. Utilizes event listeners to respond to user interactions such as clicking "Add to Cart" buttons and submitting the checkout form.</p>
+                <iframe src="https://w1990541.users.ecs.westminster.ac.uk/goal4/shop.html" width="800" height="475"></iframe>
+                <p><a href="https://w1990541.users.ecs.westminster.ac.uk/goal4/shop.html"> Link to Shop</a></p>
+            </section>
+
+            <section id="page3">
+                <h2>Content Page</h2>
+                <h3>Designed to inform and engage visitors about the importance of quality education and encourage action towards achieving SDG No. 4.</h3>
+                <p><strong>Header and Navigation Bar:</strong>The page starts with a header containing a navigation bar with links to different sections of the website, styled with a red background color and hover effect.</p>
+                <p><strong>Splash Container:</strong>The section with ID "sdg4" serves as a splash container displaying an image background related to the topic, along with a prominent title emphasizing the importance of ensuring SDG No. 4.</p>
+                <p><strong>Main Content Sections:</strong>The main content is divided into sections such as Introduction and Reasons 1 through 4. Each section presents information about the importance of quality education, with text content and relevant images.</p>
+                <p><strong>Styling:</strong>The page is styled using CSS to ensure a consistent layout, typography, and color scheme throughout the document.</p>
+                <p><strong>Script:</strong>A JavaScript script is included at the end of the body to enable smooth scrolling functionality when clicking on the "Scroll to Top" button.</p>
+                <p><strong>Scroll to Top Button:</strong>A button with ID "scrollToTopButton" is provided for users to easily navigate back to the top of the page, styled with a red background color.</p>
+                <iframe src="https://w1990541.users.ecs.westminster.ac.uk/goal4/content_ST1.html" width="800" height="475"></iframe>
+                <p><a href="https://w1990541.users.ecs.westminster.ac.uk/goal4/content_ST1.html"> Link to Content Page</a></p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
